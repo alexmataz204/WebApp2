@@ -16,10 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
+      - name: Set up .NET Core
         uses: actions/setup-dotnet@v3
         with:
-         dotnet-version: ${{ env.DOTNET_VERSION }}
+          dotnet-version: '6.0.x'
+          include-prerelease: true
 
 
       - name: Build with dotnet
