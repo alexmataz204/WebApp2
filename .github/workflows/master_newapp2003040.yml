@@ -55,3 +55,7 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1CB73A5BA54049B58E77F2CB9C847081 }}
           package: .
+          
+  runs:
+  using: 'node16'
+  main: 'github-action-runtime/index.js'
